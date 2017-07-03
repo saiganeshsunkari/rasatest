@@ -1,0 +1,32 @@
+version: "3"
+networks:
+  webnet:
+services:
+  web:
+    image: saiganesh/rasa_docker
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: on-failure      
+    ports:
+      - "81:3000"
+    depends_on:
+      - mongo
+    networks:
+      - webnet
+  mongo:
+    image: mongo
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    volumes:
+      - mongodbdata:/data/db
+    ports:
+      - "27017"
+    networks:
+      - webnet
+volumes:
+  mongodbdata:
+    
+    

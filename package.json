@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "botkit": "^0.5.4",
+    "botkit-rasa": "^1.0.3",
+    "botkit-storage-mongo": "^1.0.6",
+    "express": "^4.15.3",
+    "nodemailer": "^4.0.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
