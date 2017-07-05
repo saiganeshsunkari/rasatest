@@ -41,16 +41,6 @@ services:
       - spacy
     networks:
       - webnet
-  spacy:
-    image: jgontrum/spacyapi:en
-    deploy:
-      replicas: 1
-      restart_policy:
-        condition: on-failure
-    ports: 
-      - "5001:5000"
-    networks:
-      - webnet
 volumes:
   mongodbdata:
     
