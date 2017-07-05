@@ -26,6 +26,32 @@ services:
       - "27017"
     networks:
       - webnet
+  rasa:
+    image: saiganesh/rasa
+    command: start
+    deploy:
+      placement:
+        constraints:
+	  - node.role==manager
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "5000:5000"
+    depends_on:
+      - spacy
+    networks:
+      - webnet
+  spacy:
+    image: jgontrum/spacyapi:en
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      ports: 
+        - "5001:5000"
+      networks:
+        - webnet
 volumes:
   mongodbdata:
     

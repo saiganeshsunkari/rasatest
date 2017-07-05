@@ -7,7 +7,7 @@ module.exports = config => {
   }
 
   if (!config.rasa_uri) {
-    config.rasa_uri = 'http://192.168.1.234:5000'
+    config.rasa_uri = 'http://34.227.175.80:5000'
   }
 
   var middleware = {
@@ -17,10 +17,10 @@ module.exports = config => {
         next()
         return
       }
-//http://192.168.1.234:5000/parse?q=hi&model=carla_model
+//http://34.227.175.80:5000/parse?q=hi&model=carla_model
       const options = {
         method: 'GET',
-        uri: 'http://192.168.1.234:5000/parse?q='+message.text+'&model=carla_model',
+        uri: 'http://34.227.175.80:5000/parse?q='+message.text+'&model=carla_model',
         json: true
       }
 

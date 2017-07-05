@@ -6,7 +6,7 @@ const Botkit = require('botkit');
 var request = require('request');
 var mongoStorage = require('botkit-storage-mongo')({mongoUri: "mongodb://admin:UKFPAYMVBAHBSOJH@sl-us-south-1-portal.2.dblayer.com:17167/admin?ssl=true"});
 const rasa = require('./src/middleware-rasa')({
-  rasa_uri: 'http://192.168.1.234:5000'
+  rasa_uri: 'http://34.227.175.80:5000'
 })
 var mail = require('./src/mail');
 var mailOptions = {
