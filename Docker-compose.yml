@@ -23,11 +23,11 @@ services:
     volumes:
       - mongodbdata:/data/db
     ports:
-      - "27017"
+      - "27017:27017"
     networks:
       - webnet
   rasa:
-    image: saiganesh/rasa
+    image: rasa/rasa_nlu
     command: start
     deploy:
       placement:
