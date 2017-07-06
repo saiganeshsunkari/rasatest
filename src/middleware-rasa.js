@@ -20,7 +20,7 @@ module.exports = config => {
 //http://34.227.175.80:5000/parse?q=hi&model=carla_model
       const options = {
         method: 'GET',
-        uri: 'http://34.227.175.80:5000/parse?q='+message.text+'&model=carla_model',
+        uri: 'http://34.227.175.80:5000/parse?q='+message.text+,
         json: true
       }
 
